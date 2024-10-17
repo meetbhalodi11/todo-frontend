@@ -29,8 +29,8 @@ const Login = () => {
 
     return (
         <div className='w-full h-full flex items-center justify-center'>
-            <form className="w-[400px] flex flex-col items-center justify-center p-6 rounded-lg shadow-md bg-white" onSubmit={handleSubmit}>
-                <div className='font-sm font-medium mb-2'>Login</div>
+            <form className="w-[400px] flex flex-col items-center justify-center p-6 rounded-lg shadow-md bg-white dark:bg-gray-700" onSubmit={handleSubmit}>
+                <div className='font-sm font-medium mb-2 dark:text-white'>Login</div>
                 <div className="w-full mb-5">
                     <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
                     <input type="email" id="email" className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="example@email.com" value={email} onChange={(e) => setEmail(e.target.value)} required />
