@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import Login from './components/Login';
 import Register from './components/Register';
@@ -10,6 +10,10 @@ import NotAuthenticated from './NotAuthenticated';
 
 function App() {
 
+  const isAuthenticated = () => {
+    return !!localStorage.getItem('token'); // Your logic to check authentication
+  };
+
   return (
     <>
       <Router>
@@ -17,6 +21,10 @@ function App() {
           <Navbar />
           <ToastContainer />
           <Routes>
+            <Route
+              path="/"
+              element={isAuthenticated() ? <Navigate to="/tasks" /> : <Navigate to="/login" />}
+            />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
 
