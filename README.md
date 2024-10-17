@@ -25,6 +25,7 @@ VITE_API_URL=http://localhost:3000/api
 1. API error handling and overing all the scenarios
 
 ### Demo
+https://todo-frontend-meetbhalodi.vercel.app
 
 ### Backend repo url
 https://github.com/meetbhalodi11/todo-backend
