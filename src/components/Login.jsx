@@ -29,7 +29,7 @@ const Login = () => {
 
     return (
         <div className='w-full h-full flex items-center justify-center'>
-            <form className="w-[400px] flex flex-col items-center justify-center p-6 rounded-lg shadow-md bg-white dark:bg-gray-700" onSubmit={handleSubmit}>
+            <form className="w-[90%] md:w-[400px] flex flex-col items-center justify-center p-6 rounded-lg shadow-md bg-white dark:bg-gray-700" onSubmit={handleSubmit}>
                 <div className='font-sm font-medium mb-2 dark:text-white'>Login</div>
                 <div className="w-full mb-5">
                     <label htmlFor="email" className="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your email</label>
