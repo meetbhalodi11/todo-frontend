@@ -5,6 +5,7 @@ import Register from './components/Register';
 import Home from './components/Home';
 import Navbar from './components/Navbar';
 import './App.css'
+import NotAuthenticated from './NotAuthenticated';
 
 
 function App() {
@@ -18,7 +19,15 @@ function App() {
           <Routes>
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/tasks" element={<Home />} />
+
+            <Route
+              path="/tasks"
+              element={
+                <NotAuthenticated>
+                  <Home />
+                </NotAuthenticated>
+              }
+            />
           </Routes>
         </div>
       </Router>
